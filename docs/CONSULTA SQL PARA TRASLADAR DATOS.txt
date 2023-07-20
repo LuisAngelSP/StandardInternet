@@ -1,0 +1,138 @@
+INSERT INTO clientesv1 (`cli_id`, cli_nombre, cli_apellido, `id_zona`, `cli_fono`, `cli_direccion`, `cli_fb`, `cli_sexo`, `cli_correo`, `cli_dni`, `cli_linkGooContac`, `cli_linkGooFotoAparatos`, `cli_est`)
+SELECT 
+    c2.`idCliente`,
+    c2.duenioNombre, 
+    c2.duenioApellidos,
+    z.`id_zona`,
+    c2.`idFono`,
+    c2.`direcYRefer`,
+    c2.`fb`,
+    c2.`sexo`,
+    c2.`correo`,
+    c2.`dni`,
+    c2.`linkGooContac`,
+    c2.`linkGooFotoAparatos`,
+    CASE
+        WHEN c2.`estado` = 'zActivo' THEN 1
+        WHEN c2.`estado` = 'zDesactivado' THEN 0
+    END AS `cli_est`
+FROM clientesv2 c2
+INNER JOIN zona z ON c2.`zona` = z.`descripcion`
+WHERE c2.`estado` = 'zActivo' OR c2.`estado` = 'zDesactivado';
+
+/////////////////////////////////////////////////////********
+INSERT INTO decos (`dec_descripcion`,`id_cli`,`deco_nota`,`deco_linkGooFotoAparatos`,`dec_estado` )
+SELECT 
+    c2.`prestado`,
+    c2.`idCliente`,
+    c2.nota,
+    c2.`linkGooFotoAparatos`,
+    CASE
+        WHEN c2.`estado` = 'zActivo' THEN 1
+        WHEN c2.`estado` = 'zDesactivado' THEN 0
+
+    END AS `dec_estado`
+
+FROM (
+SELECT * FROM clientes WHERE (`prestado` LIKE '%deco%' OR `prestado` LIKE '%docsis%' OR `prestado` LIKE '%MOVISTAR%' OR `prestado` LIKE '%DirecTV%' OR `prestado` LIKE '%TRS%' OR `prestado` LIKE '%TLT%' OR `prestado` LIKE '%TMS%' OR `prestado` LIKE '%TMM%' OR `prestado` LIKE '%RGL%' OR `prestado` LIKE '%TNS%' OR `prestado` LIKE '%RFT%' OR `prestado` LIKE '%TPFX%' OR `prestado` LIKE '%Deco Movistar %'
+ OR `prestado` LIKE '%Retirado%'
+ OR `prestado` LIKE '%Desactivado%'     
+ OR `prestado` LIKE '%RPF%'     
+ OR `prestado` LIKE '%RRN%'
+)
+) c2
+/****************************************************************************************
+INSERT INTO routes (`rout_descripcion`,`id_cli`, `ipx`, `rout_mac`, `rout_wifi`, `rout_pasword`, `passAdmin`, `rout_wifidefault`,`rout_passdefault`,`rout_puertos`,`rout_nota`,`usuario`,`password`,`linkGooFotoAparatos`,`rout_estado`,`prestado`)
+SELECT 
+    c2.`routerMarca`,
+    c2.`idCliente`,
+    C2.`ipx`,
+    c2.`MacWAN`,
+    c2.`xwifi`,
+    c2.`wifiClave`,
+    c2.`passAdmin`,
+    c2.`wifiDefault`,
+    c2.`PassDefault`,
+    c2.`chrPort`,
+    c2.`nota`,
+    c2.`usuario`,
+    c2.`password`,
+    c2.`linkGooFotoAparatos`,
+    CASE
+        WHEN c2.`estado` = 'zActivo' THEN 1
+        WHEN c2.`estado` = 'zDesactivado' THEN 0
+
+    END AS `rout_estado`,
+    c2.prestado
+    
+FROM (
+SELECT * FROM clientesv2 WHERE (`routerMarca` LIKE '%Link%' OR `routerMarca` LIKE '%tp-link%' 
+OR `routerMarca` LIKE '%Nexxt%'OR `routerMarca` LIKE '%Mercusys%' OR `routerMarca` LIKE '%router%'OR `routerMarca` LIKE '%Huawei%' OR `routerMarca` LIKE '%Laptop%'OR `routerMarca` LIKE '%pc%'OR `routerMarca` LIKE '%Tp%'OR
+ `routerMarca` LIKE '%Smart TV%'OR
+ `routerMarca` LIKE '%Tenda%'OR
+ `routerMarca` LIKE '%D-link%'OR
+ `routerMarca` LIKE '%TendaPequeño%'OR
+`prestado` LIKE '%router%')
+) c2
+
+
+///////////////////*********************************************************
+INSERT INTO casas (cas_descripcion, cas_direccion, cas_est,`id_cliente`)
+SELECT 'CASA 01', cli_direccion, `cli_est`,`cli_id`
+FROM clientesv1
+WHERE cli_direccion <> '' AND cli_est = 1;
+
+
+///////////////////////////////*********************************************************////////////////////
+
+
+INSERT INTO new_instalacion (`cli_id`, `inst_fech`, `import_servicio`, `inst_precio`, `instalacion17`, `instalacion18`, `serv_id`, `rout_id`, `deco_id`, `velocidad_MB`, `inst_observacion`, `instalacion19`, `inst_est`, `id_casas`)
+SELECT
+    c.`idCliente`,
+    c.`fechaInstal`,
+    c.`tarraga`,
+    c.`costoInstal`,
+    c.`ACuentaInstal`,
+    c.`saldoInstal`,
+    CASE
+        WHEN c.`servicioInstalado` = 'DirecTV' THEN 3
+        WHEN c.`servicioInstalado` = 'casa + oficina' THEN 1
+        WHEN c.`servicioInstalado` = 'Cable' THEN 2
+        WHEN c.`servicioInstalado` = 'cableTV' THEN 2
+        WHEN c.`servicioInstalado` = 'Modem + Un deco Movistar Id-6' THEN 2
+        WHEN c.`servicioInstalado` = 'Deco Movistar' THEN 2
+        WHEN c.`servicioInstalado` = '02 decos movistar satelital GS y PC' THEN 2
+        WHEN c.`servicioInstalado` = 'Internet' THEN 1
+        WHEN c.`servicioInstalado` = 'Internet + UN Deco' THEN 1
+        WHEN c.`servicioInstalado` = 'Internet + Un Deco Movistar LP entregado el 27/07/21' THEN 1
+        WHEN c.`servicioInstalado` = 'Internet + Un Deco Movistar FM' THEN 1
+        WHEN c.`servicioInstalado` = 'Internet + UN Deco Movistar PT' THEN 1
+        WHEN c.`servicioInstalado` = 'Internet+Un Deco Movistar GR' THEN 1
+        WHEN c.`servicioInstalado` = 'internet+Deco' THEN 1
+        WHEN c.`servicioInstalado` = 'Internet+Netflix' THEN 1
+        WHEN c.`servicioInstalado` = 'Internet+Un Deco Movistar Id-19' THEN 1
+        WHEN c.`servicioInstalado` = 'Internet 20/02/2020 y DirecTV 10/09/2020 DOS decos' THEN 1
+        WHEN c.`servicioInstalado` = 'Internet + Deco DirecTv' THEN 1
+        WHEN c.`servicioInstalado` = 'Internet y Cable Movistar' THEN 1
+        WHEN c.`servicioInstalado` = 'Internet 70 + UN Deco 40' THEN 1
+        WHEN c.`servicioInstalado` = 'internet + UN DirecTV' THEN 1
+        WHEN c.`servicioInstalado` = 'Internet+DirecTV TNS' THEN 1
+        WHEN c.`servicioInstalado` = 'Internet + UN Deco Movistar Id-10' THEN 1
+        WHEN c.`servicioInstalado` = 'internet + UN deco Movistar Id-7' THEN 1
+    END AS `servicioInstalado`,
+    r.`id_route` AS `routerMarca`,
+    d.`id_deco` AS `prestado`,
+    c.`veloc`,
+    c.`nota`,
+    c.`tomaDeSwitch`,
+    CASE
+        WHEN c.`estado` = 'zActivo' THEN 1
+        WHEN c.`estado` = 'zDesactivado' THEN 0
+
+    END AS `inst_est`,
+    casa.`id_casas`
+FROM clientesv2 c
+INNER JOIN casas casa ON c.`idCliente` = casa.`id_cliente`
+LEFT JOIN routes r ON c.`idCliente` = r.`id_cli`
+LEFT JOIN decos d ON c.`idCliente` = d.`id_cli`
+WHERE casa.cas_descripcion = 'CASA 01';
