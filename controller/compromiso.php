@@ -99,7 +99,7 @@ require_once("../model/Compromiso.php");
                 foreach ($datos as $row) {
                     $sub_array = array();
 
-                    $sub_array[] = '<button type="button" onclick="Realizado('.$row["id_compromiso"].')" id="'.$row["id_compromiso"].'" class="btn btn-success btn-sm"><i class="fas fa-check"></i></button> <button type="button" onclick="editar('.$row["id_compromiso"].')" id="'.$row["id_compromiso"].'" class="btn btn-primary btn-sm"><i class="fas fa-pencil-alt"></i></button>';
+                    $sub_array[] = '<button type="button" onclick="Realizado('.$row["id_compromiso"].')" id="'.$row["id_compromiso"].'" class="btn btn-success btn-sm"><i class="fas fa-check"></i></button> <button type="button" onclick="editar('.$row["id_compromiso"].')" id="'.$row["id_compromiso"].'" class="compromiso_ btn btn-primary btn-sm"><i class="fas fa-pencil-alt"></i></button>';
                     
                     $sub_array[] = $row["cliente"];
                     $sub_array[] = $row["comp_fech"];

@@ -12,13 +12,6 @@ $base_url = $conectar->ruta();
     <strong>Copyright &copy; 2023 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> Todos los derechos reservados.
   </footer>
 
-  <!-- Control Sidebar -->
-  <!-- /.control-sidebar -->
-<!-- ./wrapper -->
-
-<!-- js de plantilla -->
-
-
 <!-- jQuery -->
 <!-- <script src="<?php echo $base_url; ?>public/plugins/jquery/jquery.min.js"></script> -->
 <!-- Summernote -->
@@ -60,14 +53,6 @@ $(document).ready(function() {
 <script src="<?php echo $base_url; ?>public/plugins/sweetalert2/sweetalert2.min.js"></script>
 
 
-<!-- LIBRERÍA DE DATATABLES -->
-<!-- <script src="<?php echo $base_url; ?>public/DataTables/jquery.dataTables.min.js"></script> -->
-
-
-<!-- Mousetrap-atajo de teclado -->
-
-
-
 
 
 <!-- DataTables  & Plugins -->
@@ -80,19 +65,6 @@ $(document).ready(function() {
 <script src="<?php echo $base_url; ?>public/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
 <script src="<?php echo $base_url; ?>public/plugins/datatables-buttons/js/buttons.print.min.js"></script>
 <script src="<?php echo $base_url; ?>public/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
-
-
-<!--JS BUTTONS DATATABLE -->
-<!-- <script src="<?php echo $base_url; ?>public/DataTables/dataTables.buttons.min.js"></script> -->
-<!-- <script src="<?php echo $base_url; ?>public/DataTables/buttons.html5.min.js"></script> -->
-
-
-<!-- PLUGIN FIXEDHEADER -->
-<!-- <script src="//cdn.datatables.net/fixedheader/3.1.9/js/dataTables.fixedHeader.min.js"></script> -->
-
-<!-- <script src="public/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script> -->
-<!-- <script src="public/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script> -->
-<!-- <script src="public/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script> -->
 
 
 
@@ -184,17 +156,6 @@ $(document).ready(function() {
 
     });
 
-          // Asignar atajo de teclado para activar el buscador
-    Mousetrap.bind('alt+b', function(e) {
-        // Verificar si la tecla Alt está presionada
-        if (e.altKey) {
-        // Obtener el campo de búsqueda del DataTable
-        var searchInput = $('.dataTables_filter input[type="search"]');
-        
-        // Enfocar el campo de búsqueda para permitir al usuario escribir inmediatamente
-        searchInput.focus();
-        }
-    });
 
 
     Mousetrap.bind('alt+z', function() {
@@ -206,7 +167,86 @@ $(document).ready(function() {
 
     });
 
+    Mousetrap.bind('alt+l+l', function() {
+        var mensajesLink = document.getElementById('all-mensaje');
+        
+        if (mensajesLink) {
+            mensajesLink.click();
+        }
+
+    });
+
+    Mousetrap.bind('alt+v', function() {
+        var mensajesLink = document.getElementById('boton-mensaje');
+        
+        if (mensajesLink) {
+            mensajesLink.click();
+        }
+
+    });
+
+
+
+    /*** botnoes de atajo superior del table */
+
+    Mousetrap.bind('alt+x', function() {
+        var mensajesLink = document.getElementById('btn_allcompromiso');
+        
+        if (mensajesLink) {
+            mensajesLink.click();
+        }
+
+    });
+
+    Mousetrap.bind('alt+e', function() {
+        var mensajesLink = document.getElementById('btn_commpromisocerca');
+        
+        if (mensajesLink) {
+            mensajesLink.click();
+        }
+
+    });
+
+    Mousetrap.bind('alt+y', function() {
+        var mensajesLink = document.getElementById('btn_historycompromiso');
+        
+        if (mensajesLink) {
+            mensajesLink.click();
+        }
+
+    });
+
+
+    /** DISPOSITIVOS   */
     
+    // Mousetrap.bind('alt+v', function() {
+    //     var mensajesLink = document.getElementById('navbarDropdownMenuLink');
+        
+    //     if (mensajesLink) {
+    //         mensajesLink.click();
+    //     }
+
+    // });
+
+
+        
+    Mousetrap.bind('alt+u', function() {
+        var mensajesLink = document.getElementById('btn_brouter');
+        
+        if (mensajesLink) {
+            mensajesLink.click();
+        }
+
+    });
+        
+    Mousetrap.bind('alt+f', function() {
+        var mensajesLink = document.getElementById('btn_bdeco');
+        
+        if (mensajesLink) {
+            mensajesLink.click();
+        }
+
+    });
 
 
 

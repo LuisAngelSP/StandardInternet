@@ -188,14 +188,14 @@
                             <div class="form-group">
                                 <label for="">|</label>
                                 <br>
-                                <div id="boton-mensaje" class="btn btn-primary">Mostrar Mensaje</div>
+                                <div id="boton-mensaje" class="btn btn-primary">Mostrar Mensaje(V)</div>
                             </div>
-                        </div>
+                        </div> 
                         <div class="col-lg-2">
                             <div class="form-group">
                                 <label for="">|</label>
                                 <br>
-                                <div id="all-mensaje" class="btn btn-primary">All Mensaje</div>
+                                <div id="all-mensaje" class="btn btn-primary">All Mensaje(LL)</div>
                             </div>
                         </div>
                         <div id="oculto">

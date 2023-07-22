@@ -49,12 +49,66 @@
           } else {
             $(celdas).addClass('verde'); // Falta más de 2 días para el compromiso
           }
+        },
+        "createdRow": function(row, data, dataIndex) {
+          $(row).find('td').addClass('row-ajustada');
+  
+        },
+        "drawCallback": function(settings) {
+          var api = this.api();
+          var rows = api.rows({ page: 'current' }).nodes();
+          var startIndex = api.page.info().start;
+        
+          $(rows).each(function(index) {
+            var numero = ((startIndex + index + 1) % 10).toString();
+            var valorActual = $(this).find('td').eq(1).html();
+            var splitValor = valorActual.split(" - ");
+            var nuevoValor = valorActual;
+        
+            if (splitValor.length > 1) {
+              nuevoValor = numero + " - " + splitValor[0] + " - " + splitValor[1];
+            } else {
+              nuevoValor = numero + " - " + valorActual;
+            }
+        
+            $(this).find('td').eq(1).html(nuevoValor);
+          });
         }
+      });
+    
+  
+  
+  // Función para asignar atajos de teclado para editar cliente
+  for (var i = 1; i <= 9; i++) {
+    Mousetrap.bind('alt+' + i, (function(i) {
+      return function(e) {
+        // Verificar si la tecla Alt está presionada
+        if (e.altKey && !e.shiftKey) {
+          var editarLink = $('.compromiso_').eq(i - 1);
+  
+          if (editarLink.length > 0) {
+            editarLink.click();
+          }
+        }
+      };
+    })(i));
+  }
+  
+  // Asignar atajo de teclado para el cero
+  Mousetrap.bind('alt+0', function(e) {
+    // Verificar si la tecla Alt está presionada
+    if (e.altKey && !e.shiftKey) {
+      var editarLink = $('.compromiso_').eq(9);
+  
+      if (editarLink.length > 0) {
+        editarLink.click();
+      }
+    }
+  });
+  }); 
+  
+  
         
-        
-    });
-});
-
 
 function listarCompromisoAll() {
   // Limpiar y destruir la tabla existente

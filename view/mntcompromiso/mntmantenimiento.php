@@ -7,14 +7,11 @@
 
             <form action="" method="post" id="compromiso_form">
                 <div class="modal-header">
-                    <h5 id="lbltitulo1" class="modal-title"></h5>
+                    <h5 id="lbltitulo" class="modal-title"></h5>
                     <button type="button" class="close" data-dismiss="modal">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <button type="button" class="close" data-dismiss="modal">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
                 
                 <div class="modal-body">
                     <input type="hidden" name="id_compromiso" id="id_compromiso" />

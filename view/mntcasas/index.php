@@ -28,6 +28,7 @@
                     
                             <thead>
                               <tr>
+                                <th></th>
                                 <th>id_cliente</th>
                                 <th>Servicios de:</th>
                                 <th>cas_direccion</th>
@@ -42,6 +43,7 @@
                             </thead>
                             <tbody>
                               <tr>
+                                <td class="numerador"></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
