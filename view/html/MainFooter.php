@@ -248,6 +248,15 @@ $(document).ready(function() {
 
     });
 
+    Mousetrap.bind('alt+b', function() {
+        var mensajesLink = document.getElement('<input type="search" class="' + b.sFilterInput + '"/>');
+        
+        if (mensajesLink) {
+            mensajesLink.click();
+        }
+
+    });
+
 
 
 </script>
