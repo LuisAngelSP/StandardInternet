@@ -2,13 +2,11 @@
 <div class="modal fade" id="mantenimiento" tabindex="-1"  role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
         <div class="modal-content">
-
             <form action="" method="post" id="cliente_form">
                 <div class="modal-header">
                     <h5 id="lbltitulo" class="modal-title"></h5>
                     <!-- Botón de Compromiso de Pago -->
                     <a type="button" onclick="CompromisoNuevo();" id="btn-compromiso" class="btn btn-success float-right ml-2 modo">Compromiso (O)</a>
-
                     <button type="button" class="close" data-dismiss="modal">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -16,7 +14,6 @@
                 <div class="modal-body">
                     <input type="hidden" name="cli_id" id="cli_id" />
                     <div class="row">
-
                         <div class="col-sm-3">
                         <label for="cli_dni">cli_dni</label>    
                             <div class="input-group">
@@ -37,7 +34,6 @@
                                 <label>Apellidos</label>
                                 <input type="text" id="cli_apellido" name="cli_apellido" class="form-control" placeholder="Apellidos">
                             </div>
-
                             <!-- /.form-group -->
                         </div>
                         <!-- /.col -->
@@ -46,16 +42,13 @@
                                 <label for="cli_correo">Correo</label>
                                 <input type="email" class="form-control" id="cli_correo" name="cli_correo" placeholder="Enter email">
                             </div>
-
                             <!-- /.form-group -->
                         </div>
-
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label>Facebook</label>
                                 <input type="text" id="cli_fb" name="cli_fb" class="form-control" placeholder="Facebook">
                             </div>
-
                             <!-- /.form-group -->
                         </div>
                         <div class="col-md-3">
@@ -68,7 +61,6 @@
                                 </select>
                             </div>
                         </div>
-
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label>N° Celular</label>
@@ -77,7 +69,6 @@
                             <!-- /.form-group -->
                         </div>
                         <!-- /.col -->
-
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label>Link Contacto</label>
@@ -91,16 +82,13 @@
                                 <label>Link Foto Aparatos</label>
                                 <input type="text" id="cli_linkGooFotoAparatos" name="cli_linkGooFotoAparatos" class="form-control" placeholder="Foto Aparatos">
                             </div>
-
                             <!-- /.form-group -->
                         </div>
-
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label>cli_direccion</label>
                                 <input type="text" id="cli_direccion" name="cli_direccion" class="form-control" placeholder=" ">
                             </div>
-
                             <!-- /.form-group -->
                         </div>
                         <div class="col-md-3">
@@ -108,16 +96,13 @@
                                 <label>cliente12</label>
                                 <input type="text" id="cliente12" name="cliente12" class="form-control" placeholder=" ">
                             </div>
-
                             <!-- /.form-group -->
                         </div>
-
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label>cliente13</label>
                                 <input type="text" id="cliente13" name="cliente13" class="form-control" placeholder="">
                             </div>
-
                             <!-- /.form-group -->
                         </div>
                         <div class="col-md-3">
@@ -125,7 +110,6 @@
                                 <label>cliente14</label>
                                 <input type="text" id="cliente14" name="cliente14" class="form-control" placeholder="">
                             </div>
-
                             <!-- /.form-group -->
                         </div>
                         <div class="col-md-3">
@@ -133,16 +117,13 @@
                                 <label>cliente15</label>
                                 <input type="text" id="cliente15" name="cliente15" class="form-control" placeholder="">
                             </div>
-
                             <!-- /.form-group -->
                         </div>
-
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label>cliente16</label>
                                 <input type="text" id="cliente16" name="cliente16" class="form-control" placeholder="">
                             </div>
-
                             <!-- /.form-group -->
                         </div>
                         <div class="col-md-3">
@@ -150,7 +131,6 @@
                                 <label>cliente17</label>
                                 <input type="text" id="cliente17" name="cliente17" class="form-control" placeholder="">
                             </div>
-
                             <!-- /.form-group -->
                         </div>
                         <div class="col-md-3">
@@ -158,7 +138,6 @@
                                 <label>cliente18</label>
                                 <input type="text" id="cliente18" name="cliente18" class="form-control" placeholder="">
                             </div>
-
                             <!-- /.form-group -->
                         </div>
                         <div class="col-md-3">
@@ -166,16 +145,13 @@
                                 <label>cliente19</label>
                                 <input type="text" id="cliente19" name="cliente19" class="form-control" placeholder="">
                             </div>
-
                             <!-- /.form-group -->
                         </div>
-
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label>cliente20</label>
                                 <input type="text" id="cliente20" name="cliente20" class="form-control" placeholder="">
                             </div>
-
                             <!-- /.form-group -->
                         </div>
                         <div class="col-lg-6">
@@ -188,14 +164,14 @@
                             <div class="form-group">
                                 <label for="">|</label>
                                 <br>
-                                <div id="boton-mensaje" class="btn btn-primary">Mostrar Mensaje(V)</div>
+                                <div id="boton-mensaje" class="btn btn-primary">Mostrar Mensaje</div>
                             </div>
-                        </div> 
+                        </div>
                         <div class="col-lg-2">
                             <div class="form-group">
                                 <label for="">|</label>
                                 <br>
-                                <div id="all-mensaje" class="btn btn-primary">All Mensaje(LL)</div>
+                                <div id="all-mensaje" class="btn btn-primary">All Mensaje</div>
                             </div>
                         </div>
                         <div id="oculto">
@@ -206,32 +182,20 @@
                             <div id="mensaje-content1" name="mensaje-content1">
                             </div>
                         </div>
-
                     </div>
-
-
-
                     <div class="modal-footer">
-
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                         <button type="submit" class="btn btn-primary" id="btn-guardar">Guardar(G)</button>
                     </div>
             </form>
-
-
-
         </div>
     </div> 
 </div>
-
-
-
 <!-- Modal 02 -->
 <div class="modal fade" id="compromiso" tabindex="+1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered " role="document">
         <div class="modal-content">
-
-            <form action="" method="post" id="data_form">
+                        <form action="" method="post" id="data_form">
                 <div class="modal-header">
                     <h5 id="lbltitulo1" class="modal-title"></h5>
                     <button type="button" class="close" id="compromisoClose">
@@ -262,29 +226,20 @@
                             </div>
                         </div>
                         <!-- /.col -->
-
                         <!-- /.col -->
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label>comp_descrip</label>
                                 <textarea name="comp_descrip" id="comp_descrip" class="form-control"></textarea>
-
                             </div>
-
                             <!-- /.form-group -->
                         </div>         
                     </div>
-
-
-
                     <div class="modal-footer">
-
                     <a type="button" class="btn btn-secondary" id="cerrarCompromiso">Cerrar</a>
                         <a type="button" class="btn btn-primary btn-guardar"  id="btnCompromisoNew" onclick="InsertCompromiso();">Generar(Z)</a>
                     </div>
             </form>
-
         </div>
     </div>
 </div>
-
