@@ -44,13 +44,7 @@
                             </div>
                             <!-- /.form-group -->
                         </div>
-                        <div class="col-md-3">
-                            <div class="form-group">
-                                <label>Facebook</label>
-                                <input type="text" id="cli_fb" name="cli_fb" class="form-control" placeholder="Facebook">
-                            </div>
-                            <!-- /.form-group -->
-                        </div>
+
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label for="cli_sexo">Genero</label>
@@ -151,6 +145,13 @@
                             <div class="form-group">
                                 <label>cliente20</label>
                                 <input type="text" id="cliente20" name="cliente20" class="form-control" placeholder="">
+                            </div>
+                            <!-- /.form-group -->
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Facebook</label>
+                                  <textarea class="form-control" name="cli_fb" id="cli_fb" rows="3"></textarea>
                             </div>
                             <!-- /.form-group -->
                         </div>

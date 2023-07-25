@@ -198,7 +198,7 @@ $(document).ready(function() {
 
     });
 
-    Mousetrap.bind('alt+e', function() {
+    Mousetrap.bind('alt+n', function() {
         var mensajesLink = document.getElementById('btn_commpromisocerca');
         
         if (mensajesLink) {
@@ -239,7 +239,7 @@ $(document).ready(function() {
 
     });
         
-    Mousetrap.bind('alt+f', function() {
+    Mousetrap.bind('alt+w', function() {
         var mensajesLink = document.getElementById('btn_bdeco');
         
         if (mensajesLink) {
@@ -248,14 +248,17 @@ $(document).ready(function() {
 
     });
 
-    Mousetrap.bind('alt+b', function() {
-        var mensajesLink = document.getElement('<input type="search" class="' + b.sFilterInput + '"/>');
-        
-        if (mensajesLink) {
-            mensajesLink.click();
-        }
 
-    });
+    /****** BUSCADOR DE DATATBLE ******* */
+
+    Mousetrap.bind('alt+b', function() {
+  // Enfoca el campo de búsqueda del DataTable
+  var dataTableSearchInput = $('#cliente_data_filter input[type="search"]');
+  dataTableSearchInput.focus();
+
+  // Activa el evento de búsqueda
+  dataTableSearchInput.trigger('keyup');
+});
 
 
 

@@ -119,8 +119,6 @@ class Cliente extends Conectar{
         $sql->bindValue(17,$cliente18);
         $sql->bindValue(18,$cliente19);
         $sql->bindValue(19,$cliente20);
-
-
         $sql->execute();
 
         return $results=$sql->fetchAll(PDO::FETCH_ASSOC);
@@ -150,7 +148,7 @@ class Cliente extends Conectar{
         cliente17=?,
         cliente18=?,
         cliente19=?,
-        cliente20=? 
+        cliente20=?
         WHERE
         cli_id =?
         ";

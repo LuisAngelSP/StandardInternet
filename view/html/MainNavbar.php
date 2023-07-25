@@ -86,7 +86,7 @@ $conectar = new Conectar();
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link dl" id="btn_bdeco" onclick="CargaPlantilla('view/mntdeco/','content-wp')">
-              (F)Decodificador
+              (W)Decodificador
             </a>
           </li>
           <li class="nav-item">

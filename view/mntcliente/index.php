@@ -11,9 +11,9 @@
             <div class="col-sm-8">
               <h3 class="card-title">Listado de Clientes</h3>
               <div class="btn-group ml-4">
-                <a type="button" onclick="ListarAllClientes();" class="btn btn-link btn-sm">All</a>
-                <a type="button" onclick="CargaPlantilla('view/mntcliente/','content-wp')" class="btn btn-link btn-sm">Listar Activos</a>
-                <a type="button" onclick="listarClientesDesactivados();" class="btn btn-link btn-sm">Listar Desactivados</a>
+                <a type="button" id="btn_allcompromiso" onclick="ListarAllClientes();" class="btn btn-link btn-sm">(X)All</a>
+                <a type="button" id="btn_commpromisocerca" onclick="CargaPlantilla('view/mntcliente/','content-wp')" class="btn btn-link btn-sm">(N)Listar Activos</a>
+                <a type="button" id="btn_historycompromiso" onclick="listarClientesDesactivados();" class="btn btn-link btn-sm">(Y)Listar Desactivados</a>
               </div>
             </div>
             

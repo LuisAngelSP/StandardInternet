@@ -5,9 +5,10 @@ function init(){
 
 });
 };
-function guardaryeditar(e){
+function guardaryeditar(e){ 
   e.preventDefault();
   var formData = new FormData($("#deco_form")[0]);
+  console.log(formData)
   $.ajax({
       url: "controller/decos.php?op=guardaryeditar",
       type: "post",

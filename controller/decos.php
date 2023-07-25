@@ -77,7 +77,7 @@ require_once("../model/Deco.php");
         break;
 
         case "guardaryeditar":
-
+ 
 
             if(!empty($_POST["id_deco"])){
 

@@ -14,7 +14,7 @@
                 <h3 class="card-title">Listado de Compromiso</h3>
                 <div class="btn-group ml-4">
                 <a type="button" id="btn_allcompromiso" onclick=" listarCompromisoAll();" class="btn btn-link btn-sm"> (X)All Compromisos </a> 
-                <a type="button" id="btn_commpromisocerca" onclick="CargaPlantilla('view/mntcompromiso/','content-wp')" class="btn btn-link btn-sm">(E)Compromisos Cercanos</a> 
+                <a type="button" id="btn_commpromisocerca" onclick="CargaPlantilla('view/mntcompromiso/','content-wp')" class="btn btn-link btn-sm">(N)Compromisos Cercanos</a> 
                 <a type="button" id="btn_historycompromiso" onclick="historial_compromiso();" class="btn btn-link btn-sm">(Y)historial de Compromiso</a> 
 
               </div>

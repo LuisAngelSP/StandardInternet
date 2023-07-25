@@ -20,7 +20,7 @@ class Deco extends Conectar{
         $sql->bindValue(7,$dec_modelo);
         $sql->bindValue(8,$dec_serie);
         $sql->bindValue(9,$deco_nota);
-        $sql->bindValue(10,$deco_linkGooFotoAparatos);
+        $sql->bindValue(10,$deco_linkGooFotoAparatos); 
         $sql->bindValue(11,$datos_rescatados);
         $sql->bindValue(12,$deco14);
         $sql->bindValue(13,$deco15);

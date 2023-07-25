@@ -14,7 +14,7 @@ function init(){
 
 /***************************************** */
 
-function guardaryeditar(e){
+function guardaryeditar(e){ 
   e.preventDefault();
   var formData = new FormData($("#cliente_form")[0]);
   $.ajax({

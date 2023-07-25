@@ -11,7 +11,7 @@ $cliente = new Cliente();
 
 
 /**OPCION DE SOLICITUD DE CONTROLLER */
-switch ($_GET["op"]) {
+switch ($_GET["op"]) { 
 
     case "guardaryeditar":
         if (!empty($_POST["cli_id"])) {
