@@ -40,13 +40,24 @@ var table = $('#casa_data').DataTable({
 
   },
   "drawCallback": function(settings) {
-    var api = this.api();
-    var rows = api.rows({ page: 'current' }).nodes();
-    var startIndex = api.page.info().start;
 
-    $(rows).each(function(index) {
+    var api = this.api();
+      var rows = api.rows({ page: 'current' }).nodes();
+      var startIndex = api.page.info().start;
+
+      $(rows).each(function(index) {
+        var numero;
+        if (index < 9) {
+          numero = index + 1;
+        } else {
+          numero = 0;
+        }
+
+        // Agregar el enumerador a la primera columna (columna N°)
+        $(this).find('td').eq(0).html(numero);
+
       var numero = ((startIndex + index + 1) % 10).toString();
-      var valorActual = $(this).find('td').eq(1).html();
+      var valorActual = $(this).find('td').eq(2).html();
       var splitValor = valorActual.split(" - ");
       var nuevoValor = valorActual;
 
@@ -56,7 +67,7 @@ var table = $('#casa_data').DataTable({
         nuevoValor = valorActual + " - " + numero;
       }
 
-      $(this).find('td').eq(1).html(nuevoValor);
+      $(this).find('td').eq(2).html(nuevoValor);
     });  
   }
 });

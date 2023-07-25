@@ -27,7 +27,7 @@
           <div class="card-header">
             <div class="row">
               <div class="col-sm-10"> 
-              <h4><a href="#" onclick="CargaPlantilla('view/mntcliente/','content-wp')">Clientes / </a><a href="#" onclick="CargaPlantilla('view/mntcasasxclientes/index.php?cli_id=<?php echo $_GET['cli_id']; ?>&nombre=<?php echo urlencode($_GET['nombre']); ?>', 'content-wp')"><?php echo $nombre ?> / </a></h4>
+              <h4><a href="#" onclick="CargaPlantilla('view/mntcliente/','content-wp')">Clientes / </a><a href="#" onclick="CargaPlantilla('view/mntcasasxclientes/index.php?cli_id=<?php echo $_GET['cli_id']; ?>&nombre=<?php echo urlencode($_GET['nombre']); ?>', 'content-wp')"><?php echo $nombre ?> / </a> Casas</h4>
               </div>
               <div class="col-sm-2">
 

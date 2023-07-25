@@ -46,7 +46,7 @@ require_once("../model/Casas.php");
             break;
 
 
-                case "listar":
+        case "listar":
                     $datos = $casa->get_casa();
                     $data = array();
                     $clienteAnterior = null;
@@ -54,7 +54,7 @@ require_once("../model/Casas.php");
                     for ($i = 0; $i < count($datos); $i++) {
                         $row = $datos[$i];
                         $sub_array = array();
-                
+                        $sub_array[] = '';
                         // Verificar si el nombre del cliente es igual al cliente anterior
                         if ($row["CLIENTE"] === $clienteAnterior) {
                             // Nombre del cliente repetido, ocultarlo o colocarlo en blanco

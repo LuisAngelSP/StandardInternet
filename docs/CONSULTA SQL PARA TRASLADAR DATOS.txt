@@ -136,3 +136,5 @@ INNER JOIN casas casa ON c.`idCliente` = casa.`id_cliente`
 LEFT JOIN routes r ON c.`idCliente` = r.`id_cli`
 LEFT JOIN decos d ON c.`idCliente` = d.`id_cli`
 WHERE casa.cas_descripcion = 'CASA 01';
+
+

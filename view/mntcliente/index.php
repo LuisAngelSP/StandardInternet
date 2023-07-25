@@ -1,4 +1,4 @@
-<script type="text/javascript" src="view/mntcliente/mntcliente.js"></script>
+
 
 
 <!-- Main content -->
@@ -96,5 +96,5 @@ require_once("mntmantenimiento.php"); ?>
 
 <!-- Footer & javascrip -->
 
-
+<script type="text/javascript" src="view/mntcliente/mntcliente.js"></script>
 <!-- /.content-wrapper -->
