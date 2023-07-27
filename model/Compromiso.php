@@ -28,7 +28,7 @@ class Compromiso extends Conectar{
         FROM compromiso
         LEFT JOIN clientesv1 ON compromiso.id_cliente = clientesv1.cli_id
         WHERE comp_estado = 0
-        ORDER BY comp_fech ASC;";
+        ORDER BY fech_cumplimiento ASC;";
         $sql=$conectar->prepare($sql);
         $sql->execute();
 
@@ -102,7 +102,12 @@ class Compromiso extends Conectar{
 
         $conectar= parent::conexion();
         parent::set_names();
-        $sql="SELECT * FROM compromiso WHERE id_compromiso=?";
+        $sql="SELECT compromiso.*,
+        CONCAT(clientesv1.cli_nombre, ' ', clientesv1.cli_apellido) AS cliente
+        FROM         
+        compromiso 
+        LEFT JOIN clientesv1 ON compromiso.id_cliente = clientesv1.cli_id
+        WHERE id_compromiso=?";
         $sql=$conectar->prepare($sql);
         $sql->bindValue(1,$id_compromiso);
         $sql->execute();
@@ -116,6 +121,7 @@ class Compromiso extends Conectar{
         $conectar=parent::conexion();
         parent::set_names();
         $sql="UPDATE compromiso SET
+            fech_cumplimiento=now(),
             comp_estado=0
             WHERE
             id_compromiso =?";

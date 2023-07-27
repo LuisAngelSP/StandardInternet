@@ -102,8 +102,8 @@
                             </div>
                             <div class="col-md-3">
                                 <div class="form-group">
-                                <label>cliente12</label>
-                                <input type="text" id="cliente12"  name="cliente12" class="form-control" placeholder=" ">
+                                <label>cli_ocupacion</label>
+                                <input type="text" id="cli_ocupacion"  name="cli_ocupacion" class="form-control" placeholder=" ">
                                 </div>
 
                             <!-- /.form-group -->
@@ -111,8 +111,8 @@
 
                             <div class="col-md-3">
                                 <div class="form-group">
-                                <label>cliente13</label>
-                                <input type="text" id="cliente13"  name="cliente13" class="form-control" placeholder="">
+                                <label>cli_memoria</label>
+                                <input type="text" id="cli_memoria"  name="cli_memoria" class="form-control" placeholder="">
                                 </div>
 
                             <!-- /.form-group -->

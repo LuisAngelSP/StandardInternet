@@ -32,14 +32,18 @@ $(document).ready(function() {
 });
 
 function realizarPago(index) {
-  // Obtener el monto de pago ingresado para el cliente correspondiente
-  var montoPago = $("#monto_pago_" + index).val();
-  var nombre = $("#cliente_nombre_" + index).text();
-  // Realizar la lógica de pago y procesar la información según tus requerimientos
-  // Aquí puedes enviar los datos de pago al servidor para su procesamiento
-
-  // Ejemplo de impresión en consola
-  alert("Pago realizado para el Fila: " + index + '\n' +
-      " Cliente: " + nombre +
-      " Monto de pago: " + montoPago);
-}
+    // Obtener el monto de pago ingresado para el cliente correspondiente
+    var montoPago = $("#monto_pago_" + index).val();
+    var nombre = $("#cliente_nombre_" + index).text();
+  
+    // Realizar la lógica de pago y procesar la información según tus requerimientos
+    // Aquí puedes enviar los datos de pago al servidor para su procesamiento
+  
+    // Mostrar el modal
+    $("#msgpago").modal("show");
+  
+    // Ejemplo de impresión en consola
+    // console.log("Pago realizado para el Fila: " + index + '\n' +
+    //     " Cliente: " + nombre +
+    //     " Monto de pago: " + montoPago);
+  }

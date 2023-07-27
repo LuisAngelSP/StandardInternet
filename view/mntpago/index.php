@@ -53,4 +53,9 @@
     </div>
 </div>
 
+
+<?php  
+    include_once './pagoModal.php';
+?>
+
 <script type="text/javascript" src="view/mntpago/pago.js"></script>

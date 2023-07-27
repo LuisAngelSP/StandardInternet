@@ -171,6 +171,7 @@ function historial_compromiso() {
   // Limpiar y destruir la tabla existente
   $('#compromiso_data').DataTable().destroy();
   
+  $('#fech_cumpl').html("fech_cumplimiento")
   // Crear la nueva tabla con los parámetros deseados
   var table = $('#compromiso_data').DataTable({
     "responsive": true,
@@ -210,6 +211,8 @@ function historial_compromiso() {
     },
   });
 
+
+
 };
 
   function init(){
@@ -245,21 +248,25 @@ function historial_compromiso() {
   }
 
   function editar(id_compromiso) {
-    $('#lbltitulo').html("Editar Compromiso"); // Colocar el título en el h5
+
     $.post("controller/compromiso.php?op=mostrar", { id_compromiso: id_compromiso }, function(data) {
-        var datos = JSON.parse(data);
-        $("#id_compromiso").val(datos.id_compromiso);
-        $("#id_cliente").val(datos.id_cliente);
-
-        var comp_fech = datos.comp_fech.substring(0, 16); // Obtener los primeros 16 caracteres de la fecha y hora
-        $("#comp_fech").val(comp_fech);
-        
-        $("#comp_descrip").val(datos.comp_descrip);
-        $("#comp_tipo").val(datos.comp_tipo);
-
-        $("#compromiso").modal('show'); // Para llamar al modal
+      var datos = JSON.parse(data);
+      $("#id_compromiso").val(datos.id_compromiso);
+      $("#id_cliente").val(datos.id_cliente);
+      
+      // Actualizar el contenido del elemento con el nombre del cliente
+      $("#cliente").text("Editar Compromiso de " + datos.cliente);
+  
+      var comp_fech = datos.comp_fech.substring(0, 16); // Obtener los primeros 16 caracteres de la fecha y hora
+      $("#comp_fech").val(comp_fech);
+      
+      $("#comp_descrip").val(datos.comp_descrip);
+      $("#comp_tipo").val(datos.comp_tipo);
+  
+      $("#compromiso").modal('show'); // Para llamar al modal
     });
-}
+  }
+
 
   
   function Realizado(id_compromiso){

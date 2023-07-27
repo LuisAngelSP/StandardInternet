@@ -39,6 +39,7 @@
                                 <th>Cliente</th>
                                 <th>comp_fech</th>
                                 <th>comp_descrip</th>
+                                <th id="fech_cumpl">fecha</th>
                                 <th>comp_tipo</th>
                                 <th>comp_estado</th>
 
@@ -46,6 +47,7 @@
                             </thead>
                             <tbody>
                               <tr>
+                                <td></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>

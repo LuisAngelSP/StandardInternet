@@ -45,8 +45,8 @@
                 <th>cli_linkGooFotoAparatos</th>
                 <th>zona</th>
                 <th>Direccion</th>
-                <th>cliente12</th>
-                <th>cliente13</th>
+                <th>cli_ocupacion</th>
+                <th>cli_memoria</th>
                 <th>cliente14</th>
                 <th>cliente15</th>
                 <th>cliente16</th>

@@ -65,8 +65,8 @@ CREATE TABLE `clientesv1` (
   `cli_linkGooContac` varchar(255) DEFAULT NULL,
   `cli_linkGooFotoAparatos` varchar(255) DEFAULT NULL,
   `cli_direccion` varchar(255) DEFAULT NULL,
-  `cliente12` varchar(255) DEFAULT NULL,
-  `cliente13` varchar(255) DEFAULT NULL,
+  `cli_ocupacion` varchar(255) DEFAULT NULL,
+  `cli_memoria` varchar(255) DEFAULT NULL,
   `cliente14` varchar(255) DEFAULT NULL,
   `cliente15` varchar(255) DEFAULT NULL,
   `cliente16` varchar(255) DEFAULT NULL,
@@ -81,7 +81,7 @@ CREATE TABLE `clientesv1` (
 -- Volcado de datos para la tabla `clientesv1`
 --
 
-INSERT INTO `clientesv1` (`cli_id`, `cli_fono`, `cli_nombre`, `cli_apellido`, `cli_fb`, `cli_sexo`, `cli_correo`, `cli_dni`, `cli_linkGooContac`, `cli_linkGooFotoAparatos`, `cli_direccion`, `cliente12`, `cliente13`, `cliente14`, `cliente15`, `cliente16`, `cliente17`, `cliente18`, `cliente19`, `cliente20`, `cli_est`) VALUES
+INSERT INTO `clientesv1` (`cli_id`, `cli_fono`, `cli_nombre`, `cli_apellido`, `cli_fb`, `cli_sexo`, `cli_correo`, `cli_dni`, `cli_linkGooContac`, `cli_linkGooFotoAparatos`, `cli_direccion`, `cli_ocupacion`, `cli_memoria`, `cliente14`, `cliente15`, `cliente16`, `cliente17`, `cliente18`, `cliente19`, `cliente20`, `cli_est`) VALUES
 (1, '928393730', 'Luis Angel', 'Salgueron Prado', 'Luis Angel SP', 'Masculino', 'salgueronprado18@gmail.com', '73808069', 'www.gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1),
 (2, '956', 'patricio', 'pato', 'aa', '', 'pato@gmail.com', '89567256', '', '', '', '', '', '', '', '', '', '', '', '', 0),
 (3, '859676255', 'maria', 'alarcon', 'aaa', 'Femenino', 'maria18@gmail.com', '59687456', '', '', '', '', '', '', '', '', '', '', '', '', 1);

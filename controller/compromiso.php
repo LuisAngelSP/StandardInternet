@@ -33,6 +33,7 @@ require_once("../model/Compromiso.php");
                 $sub_array[] = $row["cliente"];
                 $sub_array[] = $row["comp_fech"];
                 $sub_array[] = $row["comp_descrip"];
+                $sub_array[] = $row["fech_cumplimiento"];
                 $sub_array[] = $row["comp_tipo"];
                 if($row["comp_estado"]==1){
                     $sub_array[] = ' <p class="text-white m-2" style="font-size: 12px;">Compromiso no realizado</p>
@@ -83,6 +84,7 @@ require_once("../model/Compromiso.php");
                 foreach($datos as $row){
                     $output["id_compromiso"]= $row["id_compromiso"];
                     $output["id_cliente"]= $row["id_cliente"];
+                    $output["cliente"]= $row["cliente"];
                     $output["comp_fech"]= $row["comp_fech"];
                     $output["comp_descrip"]= $row["comp_descrip"];
                     $output["comp_tipo"]= $row["comp_tipo"];
@@ -104,6 +106,7 @@ require_once("../model/Compromiso.php");
                     $sub_array[] = $row["cliente"];
                     $sub_array[] = $row["comp_fech"];
                     $sub_array[] = $row["comp_descrip"];
+                    $sub_array[] = $row["fech_cumplimiento"];
                     $sub_array[] = $row["comp_tipo"];
                     if($row["comp_estado"]==1){
                         $sub_array[] = '<p class="text-white m-2" style="font-size: 12px;">Compromiso no realizado</p>
@@ -146,6 +149,7 @@ require_once("../model/Compromiso.php");
                         $sub_array[] = $row["cliente"];
                         $sub_array[] = $row["comp_fech"];
                         $sub_array[] = $row["comp_descrip"];
+                        $sub_array[] = '<div class="bg-success text-center text-sm font-weight">'.$row["fech_cumplimiento"].'   </div>' ;
                         $sub_array[] = $row["comp_tipo"];
                         if($row["comp_estado"]==0){
                             $sub_array[] = '<p class="text-success m-2" style="font-size: 12px;">Compromiso realizado</p>';

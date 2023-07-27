@@ -11,10 +11,10 @@ require_once("../model/Clientev2.php");
 
         case "guardaryeditar":
             // if(!empty($_POST["cli_id"])){
-            //     $cliente->update_cliente($_POST["cli_id"],$_POST["cli_fono"],$_POST["cli_nombre"],$_POST["cli_apellido"],$_POST["cli_fb"],$_POST["cli_sexo"],$_POST["cli_correo"],$_POST["cli_dni"],$_POST["cli_linkGooContac"],$_POST["cli_linkGooFotoAparatos"],$_POST["cliente11"],$_POST["cliente12"],$_POST["cliente13"],$_POST["cliente14"],$_POST["cliente15"],$_POST["cliente16"],$_POST["cliente17"],$_POST["cliente18"],$_POST["cliente19"],$_POST["cliente20"]);
+            //     $cliente->update_cliente($_POST["cli_id"],$_POST["cli_fono"],$_POST["cli_nombre"],$_POST["cli_apellido"],$_POST["cli_fb"],$_POST["cli_sexo"],$_POST["cli_correo"],$_POST["cli_dni"],$_POST["cli_linkGooContac"],$_POST["cli_linkGooFotoAparatos"],$_POST["cliente11"],$_POST["cli_ocupacion"],$_POST["cli_memoria"],$_POST["cliente14"],$_POST["cliente15"],$_POST["cliente16"],$_POST["cliente17"],$_POST["cliente18"],$_POST["cliente19"],$_POST["cliente20"]);
             // }else{
 
-            //     $cliente->insert_cliente($_POST["cli_fono"],$_POST["cli_nombre"],$_POST["cli_apellido"],$_POST["cli_fb"],$_POST["cli_sexo"],$_POST["cli_correo"],$_POST["cli_dni"],$_POST["cli_linkGooContac"],$_POST["cli_linkGooFotoAparatos"],$_POST["cliente11"],$_POST["cliente12"],$_POST["cliente13"],$_POST["cliente14"],$_POST["cliente15"],$_POST["cliente16"],$_POST["cliente17"],$_POST["cliente18"],$_POST["cliente19"],$_POST["cliente20"]);
+            //     $cliente->insert_cliente($_POST["cli_fono"],$_POST["cli_nombre"],$_POST["cli_apellido"],$_POST["cli_fb"],$_POST["cli_sexo"],$_POST["cli_correo"],$_POST["cli_dni"],$_POST["cli_linkGooContac"],$_POST["cli_linkGooFotoAparatos"],$_POST["cliente11"],$_POST["cli_ocupacion"],$_POST["cli_memoria"],$_POST["cliente14"],$_POST["cliente15"],$_POST["cliente16"],$_POST["cliente17"],$_POST["cliente18"],$_POST["cliente19"],$_POST["cliente20"]);
             // }
             // break;
 
@@ -130,8 +130,8 @@ require_once("../model/Clientev2.php");
                     $output["cli_linkGooContac"]= $row["cli_linkGooContac"];
                     $output["cli_linkGooFotoAparatos"]= $row["cli_linkGooFotoAparatos"];
                     $output["cliente11"]= $row["cliente11"];
-                    $output["cliente12"]= $row["cliente12"];
-                    $output["cliente13"]= $row["cliente13"];
+                    $output["cli_ocupacion"]= $row["cli_ocupacion"];
+                    $output["cli_memoria"]= $row["cli_memoria"];
                     $output["cliente14"]= $row["cliente14"];
                     $output["cliente15"]= $row["cliente15"];
                     $output["cliente16"]= $row["cliente16"];
@@ -168,8 +168,8 @@ require_once("../model/Clientev2.php");
                     $sub_array[] = $row["cli_linkGooContac"];
                     $sub_array[] = $row["cli_linkGooFotoAparatos"];
                     $sub_array[] = $row["cliente11"];
-                    $sub_array[] = $row["cliente12"];
-                    $sub_array[] = $row["cliente13"];
+                    $sub_array[] = $row["cli_ocupacion"];
+                    $sub_array[] = $row["cli_memoria"];
                     $sub_array[] = $row["cliente14"];
                     $sub_array[] = $row["cliente15"];
                     $sub_array[] = $row["cliente16"];

@@ -128,8 +128,8 @@ $(document).ready(function() {
 //         $("#cli_linkGooContac").val(datos.cli_linkGooContac);
 //         $("#cli_linkGooFotoAparatos").val(datos.cli_linkGooFotoAparatos);
 //         $("#cliente11").val(datos.cliente11);
-//         $("#cliente12").val(datos.cliente12);
-//         $("#cliente13").val(datos.cliente13);
+//         $("#cli_ocupacion").val(datos.cli_ocupacion);
+//         $("#cli_memoria").val(datos.cli_memoria);
 //         $("#cliente14").val(datos.cliente14);
 //         $("#cliente15").val(datos.cliente15);
 //         $("#cliente16").val(datos.cliente16);
