@@ -4,7 +4,7 @@ require_once("../../config/conexion.php");
 require_once("../../model/Pagos.php");
 
 $pago = new Pagos();
-
+ 
 switch ($_GET["op"]) {
     case "getDetallePago":
         $jsonClientes = $_POST["clientes"];
@@ -31,5 +31,22 @@ switch ($_GET["op"]) {
     
         // Preparar la respuesta del controlador
         echo json_encode($output);
-        break;
+    break;
+
+
+    case "getMesesDeudas":
+        $jsonClientes = $_POST["clientes"];
+        $clientesSeleccionados = json_decode($jsonClientes);
+    
+        $output = [];
+        foreach ($clientesSeleccionados as $idCliente) {
+            $mesesDeudas = $pago->getMesesDeudas($idCliente);
+            if (is_array($mesesDeudas) && count($mesesDeudas) !== 0) {
+                $output[$idCliente] = $mesesDeudas;
+            }
+        }
+    
+        // Preparar la respuesta del controlador
+        echo json_encode($output);
+    break;
 }

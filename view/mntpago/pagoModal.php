@@ -11,11 +11,12 @@
       <div class="modal-body">
         <p><strong>Nombre del Cliente:</strong> <span id="clienteNombre"></span></p>
         <p><strong>Servicio Cancelado:</strong> <span id="servicioCancelado"></span></p>
+        <a type="button" class="btn btn-success m-2" onclick="copiarTextoAlPortapapeles()">Copiar al Portapapeles</a>
+        <a type="button" id="abrirMessenger" href="#" class="btn btn-info m-2" target="_blank">Abrir en Messenger</a>
         <textarea id="mensaje" rows="4" class="form-control" placeholder="Escribe tu mensaje aquí"></textarea>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary" onclick="guardarMensaje()">Guardar</button>
       </div>
     </div>
   </div>

@@ -31,5 +31,20 @@ class Pagos extends Conectar
 
         return $results = $sql->fetchAll(PDO::FETCH_ASSOC);
     }
+
+
+    public function getMesesDeudas($idCliente)
+    {
+        $conectar = parent::conexion();
+        parent::set_names();
+        $sql = "SELECT mes_deuda, monto_deuda
+                FROM deudas
+                WHERE id_cliente = ?";
+        $sql = $conectar->prepare($sql);
+        $sql->bindValue(1, $idCliente);
+        $sql->execute();
+    
+        return $results = $sql->fetchAll(PDO::FETCH_ASSOC);
+    }
 }
 ?>
